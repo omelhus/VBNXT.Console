@@ -39,3 +39,7 @@ In order to create a refresh token you need to setup [Banana Cake Pop](https://c
 | Credentials | As Basic Auth Header |
 
 When you select "Fetch token" you'll get an id token, access token and a refresh token. The refresh token is what you'll set in the user secrets file.
+
+## Adding queries and mutations
+
+GraphQL queries and mutations are added to the VBNXT.Client project under Queries. The queries and mutations will then be source generated into c#-code, so all you need to do is add what you want and compile the project. The method will then be available on the VismaBusinessNXTClient.
