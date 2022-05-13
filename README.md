@@ -3,7 +3,7 @@ This is a simple demo connecting to the Visma Business GraphQL API using .net
 
 Start with installing the [StrawberryShake Extension for Visual Studio](https://marketplace.visualstudio.com/items?itemName=ChilliCream.strawberryshake-visualstudio). This contains a GraphQL language server that will give you autocomplete when you write queries and mutations.
 
-This also requires you to run the latest version of Visual Studio 2022 (17.2).
+This also requires you to run the latest version of Visual Studio 2022 (17.2), or just the latest version of the dotnet sdk.
 
 ## Obtain client id and secret
 
