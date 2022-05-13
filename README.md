@@ -1,6 +1,10 @@
 # Visma Business NXT GraphQL API Demo
 This is a simple demo connecting to the Visma Business GraphQL API using .net
 
+Start with installing the [StrawberryShake Extension for Visual Studio](https://marketplace.visualstudio.com/items?itemName=ChilliCream.strawberryshake-visualstudio). This contains a GraphQL language server that will give you autocomplete when you write queries and mutations.
+
+This also requires you to run the latest version of Visual Studio 2022 (17.2).
+
 ## Obtain client id and secret
 
 Follow these guides on how to obtain a client id and secret - [Authorization Flow](https://docs.business.visma.net/docs/authentication/web/setup_web) or [Service Flow](https://docs.business.visma.net/docs/authentication/service/setup_service).
