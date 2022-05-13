@@ -1,0 +1,18 @@
+query GetCustomers($cid: Int!) {
+  useCompany(no: $cid) {
+    associate(filter: { customerNo: { _gt: 0 } }, sortOrder: { name: ASC }) {
+      items {
+        associateNo
+        customerNo
+        name
+        companyNo
+        addressLine1
+        postCode
+        postalArea
+        country: joinup_Country {
+           name
+        }
+      }
+    }
+  }
+}

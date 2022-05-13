@@ -1,0 +1,9 @@
+query GetAvailableCompanies {
+  availableCompanies {
+    totalCount
+    items {
+      name
+      vismaNetCompanyId
+    }
+  }
+}

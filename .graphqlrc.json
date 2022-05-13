@@ -1,0 +1,12 @@
+{
+  "projects": [
+    {
+      "schema": [
+        "src/VBNxt.Client/schema.graphql"
+      ],
+      "documents": [
+        "src/VBNxt.Client/**/*.graphql"
+      ]
+    }
+  ]
+}

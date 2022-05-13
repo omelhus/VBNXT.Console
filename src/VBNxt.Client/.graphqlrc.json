@@ -1,0 +1,30 @@
+{
+  "schema": "schema.graphql",
+  "documents": "**/*.graphql",
+  "extensions": {
+    "strawberryShake": {
+      "namespace": "VBNxt.Client",
+      "name": "VismaBusinessNXTClient",
+      "url": "https://business.visma.net/api/graphql",
+      "dependencyInjection": true,
+      "strictSchemaValidation": true,
+      "hashAlgorithm": "md5",
+      "useSingleFile": true,
+      "requestStrategy": "Default",
+      "outputDirectoryName": "Generated",
+      "noStore": true,
+      "emitGeneratedCode": true,
+      "razorComponents": false,
+      "records": {
+        "inputs": false,
+        "entities": false
+      },
+      "transportProfiles": [
+        {
+          "default": "Http",
+          "subscription": "WebSocket"
+        }
+      ]
+    }
+  }
+}

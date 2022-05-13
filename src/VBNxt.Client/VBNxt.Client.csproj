@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <GraphQL Remove="Queries\GetCompanies.graphql" />
+    <GraphQL Remove="Queries\GetCustomers.graphql" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
+		<PackageReference Include="StrawberryShake.CodeGeneration.CSharp.Analyzers" Version="12.8.1" />
+		<PackageReference Include="StrawberryShake.Transport.Http" Version="12.8.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<AdditionalFiles Include=".graphqlrc.json">
+			<GraphQLConfig>true</GraphQLConfig>
+		</AdditionalFiles>
+		<AdditionalFiles Include="Queries\GetCustomers.graphql">
+		  <GraphQL>true</GraphQL>
+		  <Generator></Generator>
+		</AdditionalFiles>
+		<AdditionalFiles Include="Queries\GetCompanies.graphql">
+			<GraphQL>true</GraphQL>
+			<Generator></Generator>
+		</AdditionalFiles>
+		<AdditionalFiles Include="schema.extensions.graphql">
+			<GraphQL>true</GraphQL>
+		</AdditionalFiles>
+		<AdditionalFiles Include="schema.graphql">
+			<GraphQL>true</GraphQL>
+		</AdditionalFiles>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove=".graphqlrc.json" />
+		<None Remove="Queries\GetCompanies.graphql" />
+		<None Remove="Queries\GetCustomers.graphql" />
+		<None Remove="schema.extensions.graphql" />
+		<None Remove="schema.graphql" />
+	</ItemGroup>
+	<ItemGroup>
+		<Folder Include="Generated\" />
+	</ItemGroup>
+
+</Project>

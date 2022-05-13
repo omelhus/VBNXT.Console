@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VBNXT.Console", "src\VBNXT.Console\VBNXT.Console.csproj", "{E8822CB5-9E98-42B6-8CB6-357A7A903991}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VBNXT.Client", "src\VBNXT.Client\VBNXT.Client.csproj", "{64AF87F2-94A8-45A0-B638-3554AB89C9EE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7956712D-9CA3-4FCB-9F75-DDE2F9C5EDFA}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8822CB5-9E98-42B6-8CB6-357A7A903991}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8822CB5-9E98-42B6-8CB6-357A7A903991}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8822CB5-9E98-42B6-8CB6-357A7A903991}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8822CB5-9E98-42B6-8CB6-357A7A903991}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64AF87F2-94A8-45A0-B638-3554AB89C9EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64AF87F2-94A8-45A0-B638-3554AB89C9EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64AF87F2-94A8-45A0-B638-3554AB89C9EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64AF87F2-94A8-45A0-B638-3554AB89C9EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8EB83C39-8714-403A-A42C-77B41A2CEE70}
+	EndGlobalSection
+EndGlobal
