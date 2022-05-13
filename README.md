@@ -5,7 +5,7 @@ This is a simple demo connecting to the Visma Business GraphQL API using .net
 
 Follow these guides on how to obtain a client id and secret - [Authorization Flow](https://docs.business.visma.net/docs/authentication/web/setup_web) or [Service Flow](https://docs.business.visma.net/docs/authentication/service/setup_service).
 
-**Tip: For your redirect url domain you can use localtest.me (or any subdomain of localtest.me), as this domain points to localhost. You won't be able to create a certificate for it, but it's enough to get going.**
+**Tip:** For your redirect url domain you can use localtest.me (or any subdomain of localtest.me), as this domain points to localhost. You won't be able to create an official certificate for it, but it's enough to get going.
 
 When you have your client id and secret you can right click the VBNXT.Console-project and select "Manage user secrets". This will open secrets.json and allow you to add your client id and secret.
 
