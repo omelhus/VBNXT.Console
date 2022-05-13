@@ -13,16 +13,18 @@ public class VismaConnectCredentials
 
 public class VismaConnectService
 {
+    private readonly HttpClient httpClient;
+    private readonly VismaConnectCredentials credentials;
+
     public VismaConnectService(HttpClient httpClient, IOptions<VismaConnectCredentials> credentials)
     {
         this.httpClient = httpClient;
         this.credentials = credentials.Value;
     }
+
     public static string? Token { get => asyncLocal.Value; }
 
-    public static readonly AsyncLocal<string?> asyncLocal = new();
-    private readonly HttpClient httpClient;
-    private readonly VismaConnectCredentials credentials;
+    public readonly static AsyncLocal<string?> asyncLocal = new();
 
     public static IDisposable UseAccessToken(string accessToken)
     {
@@ -42,6 +44,7 @@ public class VismaConnectService
         };
         request.Headers.Authorization = CreateAuthenticationHeaderValue();
         var response = await httpClient.SendAsync(request);
+        response.EnsureSuccessStatusCode();
         var responseObject = await response.Content.ReadFromJsonAsync<OAuth2TokenResponse>();
         return responseObject?.access_token;
     }
