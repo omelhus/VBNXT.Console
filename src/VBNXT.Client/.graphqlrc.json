@@ -3,7 +3,7 @@
   "documents": "**/*.graphql",
   "extensions": {
     "strawberryShake": {
-      "namespace": "VBNxt.Client",
+      "namespace": "VBNXT.Client",
       "name": "VismaBusinessNXTClient",
       "url": "https://business.visma.net/api/graphql",
       "dependencyInjection": true,

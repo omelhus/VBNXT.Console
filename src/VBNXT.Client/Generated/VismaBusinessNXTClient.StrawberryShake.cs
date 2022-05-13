@@ -6,7 +6,7 @@ namespace Microsoft.Extensions.DependencyInjection
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
     public static partial class VismaBusinessNXTClientServiceCollectionExtensions
     {
-        public static global::StrawberryShake.IClientBuilder<global::VBNxt.Client.State.VismaBusinessNXTClientStoreAccessor> AddVismaBusinessNXTClient(this global::Microsoft.Extensions.DependencyInjection.IServiceCollection services, global::StrawberryShake.ExecutionStrategy strategy = global::StrawberryShake.ExecutionStrategy.NetworkOnly)
+        public static global::StrawberryShake.IClientBuilder<global::VBNXT.Client.State.VismaBusinessNXTClientStoreAccessor> AddVismaBusinessNXTClient(this global::Microsoft.Extensions.DependencyInjection.IServiceCollection services, global::StrawberryShake.ExecutionStrategy strategy = global::StrawberryShake.ExecutionStrategy.NetworkOnly)
         {
             var serviceCollection = new global::Microsoft.Extensions.DependencyInjection.ServiceCollection();
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp =>
@@ -14,12 +14,12 @@ namespace Microsoft.Extensions.DependencyInjection
                 ConfigureClientDefault(sp, serviceCollection, strategy);
                 return new ClientServiceProvider(global::Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(serviceCollection));
             });
-            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => new global::VBNxt.Client.State.VismaBusinessNXTClientStoreAccessor());
-            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::VBNxt.Client.GetCustomersQuery>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)));
-            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::VBNxt.Client.GetAvailableCompaniesQuery>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)));
-            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::VBNxt.Client.VismaBusinessNXTClient>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)));
-            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::VBNxt.Client.IVismaBusinessNXTClient>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)));
-            return new global::StrawberryShake.ClientBuilder<global::VBNxt.Client.State.VismaBusinessNXTClientStoreAccessor>("VismaBusinessNXTClient", services, serviceCollection);
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => new global::VBNXT.Client.State.VismaBusinessNXTClientStoreAccessor());
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::VBNXT.Client.GetCustomersQuery>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::VBNXT.Client.GetAvailableCompaniesQuery>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::VBNXT.Client.VismaBusinessNXTClient>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::VBNXT.Client.IVismaBusinessNXTClient>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)));
+            return new global::StrawberryShake.ClientBuilder<global::VBNXT.Client.State.VismaBusinessNXTClientStoreAccessor>("VismaBusinessNXTClient", services, serviceCollection);
         }
 
         private static global::Microsoft.Extensions.DependencyInjection.IServiceCollection ConfigureClientDefault(global::System.IServiceProvider parentServices, global::Microsoft.Extensions.DependencyInjection.ServiceCollection services, global::StrawberryShake.ExecutionStrategy strategy = global::StrawberryShake.ExecutionStrategy.NetworkOnly)
@@ -46,22 +46,22 @@ namespace Microsoft.Extensions.DependencyInjection
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.Serialization.ISerializer, global::StrawberryShake.Serialization.TimeSpanSerializer>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.Serialization.ISerializer, global::StrawberryShake.Serialization.JsonSerializer>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.Serialization.ISerializerResolver>(services, sp => new global::StrawberryShake.Serialization.SerializerResolver(global::System.Linq.Enumerable.Concat(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::System.Collections.Generic.IEnumerable<global::StrawberryShake.Serialization.ISerializer>>(parentServices), global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::System.Collections.Generic.IEnumerable<global::StrawberryShake.Serialization.ISerializer>>(sp))));
-            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultDataFactory<global::VBNxt.Client.IGetCustomersResult>, global::VBNxt.Client.State.GetCustomersResultFactory>(services);
-            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultDataFactory>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationResultDataFactory<global::VBNxt.Client.IGetCustomersResult>>(sp));
-            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationRequestFactory>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::VBNxt.Client.IGetCustomersQuery>(sp));
-            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::VBNxt.Client.IGetCustomersResult>, global::VBNxt.Client.State.GetCustomersBuilder>(services);
-            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationExecutor<global::VBNxt.Client.IGetCustomersResult>>(services, sp => new global::StrawberryShake.StorelessOperationExecutor<global::System.Text.Json.JsonDocument, global::VBNxt.Client.IGetCustomersResult>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.Transport.Http.IHttpConnection>(sp), () => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::VBNxt.Client.IGetCustomersResult>>(sp)));
-            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::VBNxt.Client.GetCustomersQuery>(services);
-            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::VBNxt.Client.IGetCustomersQuery>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::VBNxt.Client.GetCustomersQuery>(sp));
-            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultDataFactory<global::VBNxt.Client.IGetAvailableCompaniesResult>, global::VBNxt.Client.State.GetAvailableCompaniesResultFactory>(services);
-            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultDataFactory>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationResultDataFactory<global::VBNxt.Client.IGetAvailableCompaniesResult>>(sp));
-            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationRequestFactory>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::VBNxt.Client.IGetAvailableCompaniesQuery>(sp));
-            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::VBNxt.Client.IGetAvailableCompaniesResult>, global::VBNxt.Client.State.GetAvailableCompaniesBuilder>(services);
-            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationExecutor<global::VBNxt.Client.IGetAvailableCompaniesResult>>(services, sp => new global::StrawberryShake.StorelessOperationExecutor<global::System.Text.Json.JsonDocument, global::VBNxt.Client.IGetAvailableCompaniesResult>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.Transport.Http.IHttpConnection>(sp), () => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::VBNxt.Client.IGetAvailableCompaniesResult>>(sp)));
-            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::VBNxt.Client.GetAvailableCompaniesQuery>(services);
-            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::VBNxt.Client.IGetAvailableCompaniesQuery>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::VBNxt.Client.GetAvailableCompaniesQuery>(sp));
-            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::VBNxt.Client.VismaBusinessNXTClient>(services);
-            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::VBNxt.Client.IVismaBusinessNXTClient>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::VBNxt.Client.VismaBusinessNXTClient>(sp));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultDataFactory<global::VBNXT.Client.IGetCustomersResult>, global::VBNXT.Client.State.GetCustomersResultFactory>(services);
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultDataFactory>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationResultDataFactory<global::VBNXT.Client.IGetCustomersResult>>(sp));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationRequestFactory>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::VBNXT.Client.IGetCustomersQuery>(sp));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::VBNXT.Client.IGetCustomersResult>, global::VBNXT.Client.State.GetCustomersBuilder>(services);
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationExecutor<global::VBNXT.Client.IGetCustomersResult>>(services, sp => new global::StrawberryShake.StorelessOperationExecutor<global::System.Text.Json.JsonDocument, global::VBNXT.Client.IGetCustomersResult>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.Transport.Http.IHttpConnection>(sp), () => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::VBNXT.Client.IGetCustomersResult>>(sp)));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::VBNXT.Client.GetCustomersQuery>(services);
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::VBNXT.Client.IGetCustomersQuery>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::VBNXT.Client.GetCustomersQuery>(sp));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultDataFactory<global::VBNXT.Client.IGetAvailableCompaniesResult>, global::VBNXT.Client.State.GetAvailableCompaniesResultFactory>(services);
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultDataFactory>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationResultDataFactory<global::VBNXT.Client.IGetAvailableCompaniesResult>>(sp));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationRequestFactory>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::VBNXT.Client.IGetAvailableCompaniesQuery>(sp));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::VBNXT.Client.IGetAvailableCompaniesResult>, global::VBNXT.Client.State.GetAvailableCompaniesBuilder>(services);
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationExecutor<global::VBNXT.Client.IGetAvailableCompaniesResult>>(services, sp => new global::StrawberryShake.StorelessOperationExecutor<global::System.Text.Json.JsonDocument, global::VBNXT.Client.IGetAvailableCompaniesResult>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.Transport.Http.IHttpConnection>(sp), () => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::VBNXT.Client.IGetAvailableCompaniesResult>>(sp)));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::VBNXT.Client.GetAvailableCompaniesQuery>(services);
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::VBNXT.Client.IGetAvailableCompaniesQuery>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::VBNXT.Client.GetAvailableCompaniesQuery>(sp));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::VBNXT.Client.VismaBusinessNXTClient>(services);
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::VBNXT.Client.IVismaBusinessNXTClient>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::VBNXT.Client.VismaBusinessNXTClient>(sp));
             return services;
         }
 
@@ -89,7 +89,7 @@ namespace Microsoft.Extensions.DependencyInjection
     }
 }
 
-namespace VBNxt.Client
+namespace VBNXT.Client
 {
     /// <summary>
     /// The root of all query types.
@@ -97,7 +97,7 @@ namespace VBNxt.Client
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
     public partial class GetCustomersResult : global::System.IEquatable<GetCustomersResult>, IGetCustomersResult
     {
-        public GetCustomersResult(global::VBNxt.Client.IGetCustomers_UseCompany? useCompany)
+        public GetCustomersResult(global::VBNXT.Client.IGetCustomers_UseCompany? useCompany)
         {
             UseCompany = useCompany;
         }
@@ -105,7 +105,7 @@ namespace VBNxt.Client
         /// <summary>
         /// The query context for a company.
         /// </summary>
-        public global::VBNxt.Client.IGetCustomers_UseCompany? UseCompany { get; }
+        public global::VBNXT.Client.IGetCustomers_UseCompany? UseCompany { get; }
 
         public virtual global::System.Boolean Equals(GetCustomersResult? other)
         {
@@ -165,7 +165,7 @@ namespace VBNxt.Client
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
     public partial class GetCustomers_UseCompany_Query_UseCompany : global::System.IEquatable<GetCustomers_UseCompany_Query_UseCompany>, IGetCustomers_UseCompany_Query_UseCompany
     {
-        public GetCustomers_UseCompany_Query_UseCompany(global::VBNxt.Client.IGetCustomers_UseCompany_Associate? associate)
+        public GetCustomers_UseCompany_Query_UseCompany(global::VBNXT.Client.IGetCustomers_UseCompany_Associate? associate)
         {
             Associate = associate;
         }
@@ -173,7 +173,7 @@ namespace VBNxt.Client
         /// <summary>
         /// A field for accessing the data from the table `Associate`
         /// </summary>
-        public global::VBNxt.Client.IGetCustomers_UseCompany_Associate? Associate { get; }
+        public global::VBNXT.Client.IGetCustomers_UseCompany_Associate? Associate { get; }
 
         public virtual global::System.Boolean Equals(GetCustomers_UseCompany_Query_UseCompany? other)
         {
@@ -236,7 +236,7 @@ namespace VBNxt.Client
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
     public partial class GetCustomers_UseCompany_Associate_Query_UseCompany_Associate_Connection : global::System.IEquatable<GetCustomers_UseCompany_Associate_Query_UseCompany_Associate_Connection>, IGetCustomers_UseCompany_Associate_Query_UseCompany_Associate_Connection
     {
-        public GetCustomers_UseCompany_Associate_Query_UseCompany_Associate_Connection(global::System.Collections.Generic.IReadOnlyList<global::VBNxt.Client.IGetCustomers_UseCompany_Associate_Items?>? items)
+        public GetCustomers_UseCompany_Associate_Query_UseCompany_Associate_Connection(global::System.Collections.Generic.IReadOnlyList<global::VBNXT.Client.IGetCustomers_UseCompany_Associate_Items?>? items)
         {
             Items = items;
         }
@@ -244,7 +244,7 @@ namespace VBNxt.Client
         /// <summary>
         /// Array of rows returned by the query operation.
         /// </summary>
-        public global::System.Collections.Generic.IReadOnlyList<global::VBNxt.Client.IGetCustomers_UseCompany_Associate_Items?>? Items { get; }
+        public global::System.Collections.Generic.IReadOnlyList<global::VBNXT.Client.IGetCustomers_UseCompany_Associate_Items?>? Items { get; }
 
         public virtual global::System.Boolean Equals(GetCustomers_UseCompany_Associate_Query_UseCompany_Associate_Connection? other)
         {
@@ -313,7 +313,7 @@ namespace VBNxt.Client
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
     public partial class GetCustomers_UseCompany_Associate_Items_Associate : global::System.IEquatable<GetCustomers_UseCompany_Associate_Items_Associate>, IGetCustomers_UseCompany_Associate_Items_Associate
     {
-        public GetCustomers_UseCompany_Associate_Items_Associate(global::System.Int32? associateNo, global::System.Int32? customerNo, global::System.String? name, global::System.String? companyNo, global::System.String? addressLine1, global::System.String? postCode, global::System.String? postalArea, global::VBNxt.Client.IGetCustomers_UseCompany_Associate_Items_Country? country)
+        public GetCustomers_UseCompany_Associate_Items_Associate(global::System.Int32? associateNo, global::System.Int32? customerNo, global::System.String? name, global::System.String? companyNo, global::System.String? addressLine1, global::System.String? postCode, global::System.String? postalArea, global::VBNXT.Client.IGetCustomers_UseCompany_Associate_Items_Country? country)
         {
             AssociateNo = associateNo;
             CustomerNo = customerNo;
@@ -363,7 +363,7 @@ namespace VBNxt.Client
         /// <summary>
         /// A one-to-one relation, "Country" (678), from "Associate" (table "Actor" (152), columns {Ctry, 4036}) to "Country" (table "Ctry" (29), columns {CtryNo, 549}).
         /// </summary>
-        public global::VBNxt.Client.IGetCustomers_UseCompany_Associate_Items_Country? Country { get; }
+        public global::VBNXT.Client.IGetCustomers_UseCompany_Associate_Items_Country? Country { get; }
 
         public virtual global::System.Boolean Equals(GetCustomers_UseCompany_Associate_Items_Associate? other)
         {
@@ -535,7 +535,7 @@ namespace VBNxt.Client
         /// <summary>
         /// The query context for a company.
         /// </summary>
-        public global::VBNxt.Client.IGetCustomers_UseCompany? UseCompany { get; }
+        public global::VBNXT.Client.IGetCustomers_UseCompany? UseCompany { get; }
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
@@ -544,7 +544,7 @@ namespace VBNxt.Client
         /// <summary>
         /// A field for accessing the data from the table `Associate`
         /// </summary>
-        public global::VBNxt.Client.IGetCustomers_UseCompany_Associate? Associate { get; }
+        public global::VBNXT.Client.IGetCustomers_UseCompany_Associate? Associate { get; }
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
@@ -561,7 +561,7 @@ namespace VBNxt.Client
         /// <summary>
         /// Array of rows returned by the query operation.
         /// </summary>
-        public global::System.Collections.Generic.IReadOnlyList<global::VBNxt.Client.IGetCustomers_UseCompany_Associate_Items?>? Items { get; }
+        public global::System.Collections.Generic.IReadOnlyList<global::VBNXT.Client.IGetCustomers_UseCompany_Associate_Items?>? Items { get; }
     }
 
     /// <summary>
@@ -616,7 +616,7 @@ namespace VBNxt.Client
         /// <summary>
         /// A one-to-one relation, "Country" (678), from "Associate" (table "Actor" (152), columns {Ctry, 4036}) to "Country" (table "Ctry" (29), columns {CtryNo, 549}).
         /// </summary>
-        public global::VBNxt.Client.IGetCustomers_UseCompany_Associate_Items_Country? Country { get; }
+        public global::VBNXT.Client.IGetCustomers_UseCompany_Associate_Items_Country? Country { get; }
     }
 
     /// <summary>
@@ -653,7 +653,7 @@ namespace VBNxt.Client
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
     public partial class GetAvailableCompaniesResult : global::System.IEquatable<GetAvailableCompaniesResult>, IGetAvailableCompaniesResult
     {
-        public GetAvailableCompaniesResult(global::VBNxt.Client.IGetAvailableCompanies_AvailableCompanies? availableCompanies)
+        public GetAvailableCompaniesResult(global::VBNXT.Client.IGetAvailableCompanies_AvailableCompanies? availableCompanies)
         {
             AvailableCompanies = availableCompanies;
         }
@@ -661,7 +661,7 @@ namespace VBNxt.Client
         /// <summary>
         /// Companies available to the authenticated user.
         /// </summary>
-        public global::VBNxt.Client.IGetAvailableCompanies_AvailableCompanies? AvailableCompanies { get; }
+        public global::VBNXT.Client.IGetAvailableCompanies_AvailableCompanies? AvailableCompanies { get; }
 
         public virtual global::System.Boolean Equals(GetAvailableCompaniesResult? other)
         {
@@ -724,7 +724,7 @@ namespace VBNxt.Client
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
     public partial class GetAvailableCompanies_AvailableCompanies_Query_AvailableCompanies : global::System.IEquatable<GetAvailableCompanies_AvailableCompanies_Query_AvailableCompanies>, IGetAvailableCompanies_AvailableCompanies_Query_AvailableCompanies
     {
-        public GetAvailableCompanies_AvailableCompanies_Query_AvailableCompanies(global::System.Int32? totalCount, global::System.Collections.Generic.IReadOnlyList<global::VBNxt.Client.IGetAvailableCompanies_AvailableCompanies_Items>? items)
+        public GetAvailableCompanies_AvailableCompanies_Query_AvailableCompanies(global::System.Int32? totalCount, global::System.Collections.Generic.IReadOnlyList<global::VBNXT.Client.IGetAvailableCompanies_AvailableCompanies_Items>? items)
         {
             TotalCount = totalCount;
             Items = items;
@@ -738,7 +738,7 @@ namespace VBNxt.Client
         /// <summary>
         /// An array of objects representing the available companies
         /// </summary>
-        public global::System.Collections.Generic.IReadOnlyList<global::VBNxt.Client.IGetAvailableCompanies_AvailableCompanies_Items>? Items { get; }
+        public global::System.Collections.Generic.IReadOnlyList<global::VBNXT.Client.IGetAvailableCompanies_AvailableCompanies_Items>? Items { get; }
 
         public virtual global::System.Boolean Equals(GetAvailableCompanies_AvailableCompanies_Query_AvailableCompanies? other)
         {
@@ -888,7 +888,7 @@ namespace VBNxt.Client
         /// <summary>
         /// Companies available to the authenticated user.
         /// </summary>
-        public global::VBNxt.Client.IGetAvailableCompanies_AvailableCompanies? AvailableCompanies { get; }
+        public global::VBNXT.Client.IGetAvailableCompanies_AvailableCompanies? AvailableCompanies { get; }
     }
 
     /// <summary>
@@ -905,7 +905,7 @@ namespace VBNxt.Client
         /// <summary>
         /// An array of objects representing the available companies
         /// </summary>
-        public global::System.Collections.Generic.IReadOnlyList<global::VBNxt.Client.IGetAvailableCompanies_AvailableCompanies_Items>? Items { get; }
+        public global::System.Collections.Generic.IReadOnlyList<global::VBNXT.Client.IGetAvailableCompanies_AvailableCompanies_Items>? Items { get; }
     }
 
     /// <summary>
@@ -1011,7 +1011,7 @@ namespace VBNxt.Client
     /// </code>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
-    public partial class GetCustomersQuery : global::VBNxt.Client.IGetCustomersQuery
+    public partial class GetCustomersQuery : global::VBNXT.Client.IGetCustomersQuery
     {
         private readonly global::StrawberryShake.IOperationExecutor<IGetCustomersResult> _operationExecutor;
         private readonly global::StrawberryShake.Serialization.IInputValueFormatter _intFormatter;
@@ -1145,7 +1145,7 @@ namespace VBNxt.Client
     /// </code>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
-    public partial class GetAvailableCompaniesQuery : global::VBNxt.Client.IGetAvailableCompaniesQuery
+    public partial class GetAvailableCompaniesQuery : global::VBNXT.Client.IGetAvailableCompaniesQuery
     {
         private readonly global::StrawberryShake.IOperationExecutor<IGetAvailableCompaniesResult> _operationExecutor;
         public GetAvailableCompaniesQuery(global::StrawberryShake.IOperationExecutor<IGetAvailableCompaniesResult> operationExecutor)
@@ -1209,19 +1209,19 @@ namespace VBNxt.Client
     /// Represents the VismaBusinessNXTClient GraphQL client
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
-    public partial class VismaBusinessNXTClient : global::VBNxt.Client.IVismaBusinessNXTClient
+    public partial class VismaBusinessNXTClient : global::VBNXT.Client.IVismaBusinessNXTClient
     {
-        private readonly global::VBNxt.Client.IGetCustomersQuery _getCustomers;
-        private readonly global::VBNxt.Client.IGetAvailableCompaniesQuery _getAvailableCompanies;
-        public VismaBusinessNXTClient(global::VBNxt.Client.IGetCustomersQuery getCustomers, global::VBNxt.Client.IGetAvailableCompaniesQuery getAvailableCompanies)
+        private readonly global::VBNXT.Client.IGetCustomersQuery _getCustomers;
+        private readonly global::VBNXT.Client.IGetAvailableCompaniesQuery _getAvailableCompanies;
+        public VismaBusinessNXTClient(global::VBNXT.Client.IGetCustomersQuery getCustomers, global::VBNXT.Client.IGetAvailableCompaniesQuery getAvailableCompanies)
         {
             _getCustomers = getCustomers ?? throw new global::System.ArgumentNullException(nameof(getCustomers));
             _getAvailableCompanies = getAvailableCompanies ?? throw new global::System.ArgumentNullException(nameof(getAvailableCompanies));
         }
 
         public static global::System.String ClientName => "VismaBusinessNXTClient";
-        public global::VBNxt.Client.IGetCustomersQuery GetCustomers => _getCustomers;
-        public global::VBNxt.Client.IGetAvailableCompaniesQuery GetAvailableCompanies => _getAvailableCompanies;
+        public global::VBNXT.Client.IGetCustomersQuery GetCustomers => _getCustomers;
+        public global::VBNXT.Client.IGetAvailableCompaniesQuery GetAvailableCompanies => _getAvailableCompanies;
     }
 
     /// <summary>
@@ -1230,22 +1230,22 @@ namespace VBNxt.Client
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
     public partial interface IVismaBusinessNXTClient
     {
-        global::VBNxt.Client.IGetCustomersQuery GetCustomers { get; }
+        global::VBNXT.Client.IGetCustomersQuery GetCustomers { get; }
 
-        global::VBNxt.Client.IGetAvailableCompaniesQuery GetAvailableCompanies { get; }
+        global::VBNXT.Client.IGetAvailableCompaniesQuery GetAvailableCompanies { get; }
     }
 }
 
-namespace VBNxt.Client.State
+namespace VBNXT.Client.State
 {
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
-    public partial class GetCustomersResultFactory : global::StrawberryShake.IOperationResultDataFactory<global::VBNxt.Client.GetCustomersResult>
+    public partial class GetCustomersResultFactory : global::StrawberryShake.IOperationResultDataFactory<global::VBNXT.Client.GetCustomersResult>
     {
         public GetCustomersResultFactory()
         {
         }
 
-        global::System.Type global::StrawberryShake.IOperationResultDataFactory.ResultType => typeof(global::VBNxt.Client.IGetCustomersResult);
+        global::System.Type global::StrawberryShake.IOperationResultDataFactory.ResultType => typeof(global::VBNXT.Client.IGetCustomersResult);
         public GetCustomersResult Create(global::StrawberryShake.IOperationResultDataInfo dataInfo, global::StrawberryShake.IEntityStoreSnapshot? snapshot = null)
         {
             if (dataInfo is GetCustomersResultInfo info)
@@ -1256,7 +1256,7 @@ namespace VBNxt.Client.State
             throw new global::System.ArgumentException("GetCustomersResultInfo expected.");
         }
 
-        private global::VBNxt.Client.IGetCustomers_UseCompany? MapIGetCustomers_UseCompany(global::VBNxt.Client.State.Query_UseCompanyData? data)
+        private global::VBNXT.Client.IGetCustomers_UseCompany? MapIGetCustomers_UseCompany(global::VBNXT.Client.State.Query_UseCompanyData? data)
         {
             if (data is null)
             {
@@ -1276,7 +1276,7 @@ namespace VBNxt.Client.State
             return returnValue;
         }
 
-        private global::VBNxt.Client.IGetCustomers_UseCompany_Associate? MapIGetCustomers_UseCompany_Associate(global::VBNxt.Client.State.Query_UseCompany_Associate_ConnectionData? data)
+        private global::VBNXT.Client.IGetCustomers_UseCompany_Associate? MapIGetCustomers_UseCompany_Associate(global::VBNXT.Client.State.Query_UseCompany_Associate_ConnectionData? data)
         {
             if (data is null)
             {
@@ -1296,15 +1296,15 @@ namespace VBNxt.Client.State
             return returnValue;
         }
 
-        private global::System.Collections.Generic.IReadOnlyList<global::VBNxt.Client.IGetCustomers_UseCompany_Associate_Items?>? MapIGetCustomers_UseCompany_Associate_ItemsArray(global::System.Collections.Generic.IReadOnlyList<global::VBNxt.Client.State.AssociateData?>? list)
+        private global::System.Collections.Generic.IReadOnlyList<global::VBNXT.Client.IGetCustomers_UseCompany_Associate_Items?>? MapIGetCustomers_UseCompany_Associate_ItemsArray(global::System.Collections.Generic.IReadOnlyList<global::VBNXT.Client.State.AssociateData?>? list)
         {
             if (list is null)
             {
                 return null;
             }
 
-            var associates = new global::System.Collections.Generic.List<global::VBNxt.Client.IGetCustomers_UseCompany_Associate_Items?>();
-            foreach (global::VBNxt.Client.State.AssociateData? child in list)
+            var associates = new global::System.Collections.Generic.List<global::VBNXT.Client.IGetCustomers_UseCompany_Associate_Items?>();
+            foreach (global::VBNXT.Client.State.AssociateData? child in list)
             {
                 associates.Add(MapIGetCustomers_UseCompany_Associate_Items(child));
             }
@@ -1312,7 +1312,7 @@ namespace VBNxt.Client.State
             return associates;
         }
 
-        private global::VBNxt.Client.IGetCustomers_UseCompany_Associate_Items? MapIGetCustomers_UseCompany_Associate_Items(global::VBNxt.Client.State.AssociateData? data)
+        private global::VBNXT.Client.IGetCustomers_UseCompany_Associate_Items? MapIGetCustomers_UseCompany_Associate_Items(global::VBNXT.Client.State.AssociateData? data)
         {
             if (data is null)
             {
@@ -1332,7 +1332,7 @@ namespace VBNxt.Client.State
             return returnValue;
         }
 
-        private global::VBNxt.Client.IGetCustomers_UseCompany_Associate_Items_Country? MapIGetCustomers_UseCompany_Associate_Items_Country(global::VBNxt.Client.State.CountryData? data)
+        private global::VBNXT.Client.IGetCustomers_UseCompany_Associate_Items_Country? MapIGetCustomers_UseCompany_Associate_Items_Country(global::VBNXT.Client.State.CountryData? data)
         {
             if (data is null)
             {
@@ -1361,7 +1361,7 @@ namespace VBNxt.Client.State
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
     public partial class GetCustomersResultInfo : global::StrawberryShake.IOperationResultDataInfo
     {
-        public GetCustomersResultInfo(global::VBNxt.Client.State.Query_UseCompanyData? useCompany)
+        public GetCustomersResultInfo(global::VBNXT.Client.State.Query_UseCompanyData? useCompany)
         {
             UseCompany = useCompany;
         }
@@ -1369,7 +1369,7 @@ namespace VBNxt.Client.State
         /// <summary>
         /// The query context for a company.
         /// </summary>
-        public global::VBNxt.Client.State.Query_UseCompanyData? UseCompany { get; }
+        public global::VBNXT.Client.State.Query_UseCompanyData? UseCompany { get; }
 
         public global::System.Collections.Generic.IReadOnlyCollection<global::StrawberryShake.EntityId> EntityIds => global::System.Array.Empty<global::StrawberryShake.EntityId>();
         public global::System.UInt64 Version => 0;
@@ -1380,13 +1380,13 @@ namespace VBNxt.Client.State
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
-    public partial class GetAvailableCompaniesResultFactory : global::StrawberryShake.IOperationResultDataFactory<global::VBNxt.Client.GetAvailableCompaniesResult>
+    public partial class GetAvailableCompaniesResultFactory : global::StrawberryShake.IOperationResultDataFactory<global::VBNXT.Client.GetAvailableCompaniesResult>
     {
         public GetAvailableCompaniesResultFactory()
         {
         }
 
-        global::System.Type global::StrawberryShake.IOperationResultDataFactory.ResultType => typeof(global::VBNxt.Client.IGetAvailableCompaniesResult);
+        global::System.Type global::StrawberryShake.IOperationResultDataFactory.ResultType => typeof(global::VBNXT.Client.IGetAvailableCompaniesResult);
         public GetAvailableCompaniesResult Create(global::StrawberryShake.IOperationResultDataInfo dataInfo, global::StrawberryShake.IEntityStoreSnapshot? snapshot = null)
         {
             if (dataInfo is GetAvailableCompaniesResultInfo info)
@@ -1397,7 +1397,7 @@ namespace VBNxt.Client.State
             throw new global::System.ArgumentException("GetAvailableCompaniesResultInfo expected.");
         }
 
-        private global::VBNxt.Client.IGetAvailableCompanies_AvailableCompanies? MapIGetAvailableCompanies_AvailableCompanies(global::VBNxt.Client.State.Query_AvailableCompaniesData? data)
+        private global::VBNXT.Client.IGetAvailableCompanies_AvailableCompanies? MapIGetAvailableCompanies_AvailableCompanies(global::VBNXT.Client.State.Query_AvailableCompaniesData? data)
         {
             if (data is null)
             {
@@ -1417,15 +1417,15 @@ namespace VBNxt.Client.State
             return returnValue;
         }
 
-        private global::System.Collections.Generic.IReadOnlyList<global::VBNxt.Client.IGetAvailableCompanies_AvailableCompanies_Items>? MapIGetAvailableCompanies_AvailableCompanies_ItemsNonNullableArray(global::System.Collections.Generic.IReadOnlyList<global::VBNxt.Client.State.VbcCompanyData>? list)
+        private global::System.Collections.Generic.IReadOnlyList<global::VBNXT.Client.IGetAvailableCompanies_AvailableCompanies_Items>? MapIGetAvailableCompanies_AvailableCompanies_ItemsNonNullableArray(global::System.Collections.Generic.IReadOnlyList<global::VBNXT.Client.State.VbcCompanyData>? list)
         {
             if (list is null)
             {
                 return null;
             }
 
-            var vbcCompanys = new global::System.Collections.Generic.List<global::VBNxt.Client.IGetAvailableCompanies_AvailableCompanies_Items>();
-            foreach (global::VBNxt.Client.State.VbcCompanyData child in list)
+            var vbcCompanys = new global::System.Collections.Generic.List<global::VBNXT.Client.IGetAvailableCompanies_AvailableCompanies_Items>();
+            foreach (global::VBNXT.Client.State.VbcCompanyData child in list)
             {
                 vbcCompanys.Add(MapNonNullableIGetAvailableCompanies_AvailableCompanies_Items(child));
             }
@@ -1433,7 +1433,7 @@ namespace VBNxt.Client.State
             return vbcCompanys;
         }
 
-        private global::VBNxt.Client.IGetAvailableCompanies_AvailableCompanies_Items MapNonNullableIGetAvailableCompanies_AvailableCompanies_Items(global::VBNxt.Client.State.VbcCompanyData data)
+        private global::VBNXT.Client.IGetAvailableCompanies_AvailableCompanies_Items MapNonNullableIGetAvailableCompanies_AvailableCompanies_Items(global::VBNXT.Client.State.VbcCompanyData data)
         {
             IGetAvailableCompanies_AvailableCompanies_Items returnValue = default !;
             if (data.__typename.Equals("VbcCompany", global::System.StringComparison.Ordinal))
@@ -1457,7 +1457,7 @@ namespace VBNxt.Client.State
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
     public partial class GetAvailableCompaniesResultInfo : global::StrawberryShake.IOperationResultDataInfo
     {
-        public GetAvailableCompaniesResultInfo(global::VBNxt.Client.State.Query_AvailableCompaniesData? availableCompanies)
+        public GetAvailableCompaniesResultInfo(global::VBNXT.Client.State.Query_AvailableCompaniesData? availableCompanies)
         {
             AvailableCompanies = availableCompanies;
         }
@@ -1465,7 +1465,7 @@ namespace VBNxt.Client.State
         /// <summary>
         /// Companies available to the authenticated user.
         /// </summary>
-        public global::VBNxt.Client.State.Query_AvailableCompaniesData? AvailableCompanies { get; }
+        public global::VBNXT.Client.State.Query_AvailableCompaniesData? AvailableCompanies { get; }
 
         public global::System.Collections.Generic.IReadOnlyCollection<global::StrawberryShake.EntityId> EntityIds => global::System.Array.Empty<global::StrawberryShake.EntityId>();
         public global::System.UInt64 Version => 0;
@@ -1476,12 +1476,12 @@ namespace VBNxt.Client.State
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
-    public partial class GetCustomersBuilder : global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::VBNxt.Client.IGetCustomersResult>
+    public partial class GetCustomersBuilder : global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::VBNXT.Client.IGetCustomersResult>
     {
-        private readonly global::StrawberryShake.IOperationResultDataFactory<global::VBNxt.Client.IGetCustomersResult> _resultDataFactory;
+        private readonly global::StrawberryShake.IOperationResultDataFactory<global::VBNXT.Client.IGetCustomersResult> _resultDataFactory;
         private readonly global::StrawberryShake.Serialization.ILeafValueParser<global::System.Int32, global::System.Int32> _intParser;
         private readonly global::StrawberryShake.Serialization.ILeafValueParser<global::System.String, global::System.String> _stringParser;
-        public GetCustomersBuilder(global::StrawberryShake.IOperationResultDataFactory<global::VBNxt.Client.IGetCustomersResult> resultDataFactory, global::StrawberryShake.Serialization.ISerializerResolver serializerResolver)
+        public GetCustomersBuilder(global::StrawberryShake.IOperationResultDataFactory<global::VBNXT.Client.IGetCustomersResult> resultDataFactory, global::StrawberryShake.Serialization.ISerializerResolver serializerResolver)
         {
             _resultDataFactory = resultDataFactory ?? throw new global::System.ArgumentNullException(nameof(resultDataFactory));
             _intParser = serializerResolver.GetLeafValueParser<global::System.Int32, global::System.Int32>("Int") ?? throw new global::System.ArgumentException("No serializer for type `Int` found.");
@@ -1535,7 +1535,7 @@ namespace VBNxt.Client.State
             return (_resultDataFactory.Create(resultInfo), resultInfo);
         }
 
-        private global::VBNxt.Client.State.Query_UseCompanyData? DeserializeIGetCustomers_UseCompany(global::System.Text.Json.JsonElement? obj)
+        private global::VBNXT.Client.State.Query_UseCompanyData? DeserializeIGetCustomers_UseCompany(global::System.Text.Json.JsonElement? obj)
         {
             if (!obj.HasValue)
             {
@@ -1545,13 +1545,13 @@ namespace VBNxt.Client.State
             var typename = obj.Value.GetProperty("__typename").GetString();
             if (typename?.Equals("Query_UseCompany", global::System.StringComparison.Ordinal) ?? false)
             {
-                return new global::VBNxt.Client.State.Query_UseCompanyData(typename, associate: DeserializeIGetCustomers_UseCompany_Associate(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "associate")));
+                return new global::VBNXT.Client.State.Query_UseCompanyData(typename, associate: DeserializeIGetCustomers_UseCompany_Associate(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "associate")));
             }
 
             throw new global::System.NotSupportedException();
         }
 
-        private global::VBNxt.Client.State.Query_UseCompany_Associate_ConnectionData? DeserializeIGetCustomers_UseCompany_Associate(global::System.Text.Json.JsonElement? obj)
+        private global::VBNXT.Client.State.Query_UseCompany_Associate_ConnectionData? DeserializeIGetCustomers_UseCompany_Associate(global::System.Text.Json.JsonElement? obj)
         {
             if (!obj.HasValue)
             {
@@ -1561,20 +1561,20 @@ namespace VBNxt.Client.State
             var typename = obj.Value.GetProperty("__typename").GetString();
             if (typename?.Equals("Query_UseCompany_Associate_Connection", global::System.StringComparison.Ordinal) ?? false)
             {
-                return new global::VBNxt.Client.State.Query_UseCompany_Associate_ConnectionData(typename, items: DeserializeIGetCustomers_UseCompany_Associate_ItemsArray(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "items")));
+                return new global::VBNXT.Client.State.Query_UseCompany_Associate_ConnectionData(typename, items: DeserializeIGetCustomers_UseCompany_Associate_ItemsArray(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "items")));
             }
 
             throw new global::System.NotSupportedException();
         }
 
-        private global::System.Collections.Generic.IReadOnlyList<global::VBNxt.Client.State.AssociateData?>? DeserializeIGetCustomers_UseCompany_Associate_ItemsArray(global::System.Text.Json.JsonElement? obj)
+        private global::System.Collections.Generic.IReadOnlyList<global::VBNXT.Client.State.AssociateData?>? DeserializeIGetCustomers_UseCompany_Associate_ItemsArray(global::System.Text.Json.JsonElement? obj)
         {
             if (!obj.HasValue)
             {
                 return null;
             }
 
-            var associates = new global::System.Collections.Generic.List<global::VBNxt.Client.State.AssociateData?>();
+            var associates = new global::System.Collections.Generic.List<global::VBNXT.Client.State.AssociateData?>();
             foreach (global::System.Text.Json.JsonElement child in obj.Value.EnumerateArray())
             {
                 associates.Add(DeserializeIGetCustomers_UseCompany_Associate_Items(child));
@@ -1583,7 +1583,7 @@ namespace VBNxt.Client.State
             return associates;
         }
 
-        private global::VBNxt.Client.State.AssociateData? DeserializeIGetCustomers_UseCompany_Associate_Items(global::System.Text.Json.JsonElement? obj)
+        private global::VBNXT.Client.State.AssociateData? DeserializeIGetCustomers_UseCompany_Associate_Items(global::System.Text.Json.JsonElement? obj)
         {
             if (!obj.HasValue)
             {
@@ -1593,7 +1593,7 @@ namespace VBNxt.Client.State
             var typename = obj.Value.GetProperty("__typename").GetString();
             if (typename?.Equals("Associate", global::System.StringComparison.Ordinal) ?? false)
             {
-                return new global::VBNxt.Client.State.AssociateData(typename, associateNo: DeserializeInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "associateNo")), customerNo: DeserializeInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "customerNo")), name: DeserializeString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "name")), companyNo: DeserializeString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "companyNo")), addressLine1: DeserializeString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "addressLine1")), postCode: DeserializeString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "postCode")), postalArea: DeserializeString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "postalArea")), country: DeserializeIGetCustomers_UseCompany_Associate_Items_Country(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "country")));
+                return new global::VBNXT.Client.State.AssociateData(typename, associateNo: DeserializeInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "associateNo")), customerNo: DeserializeInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "customerNo")), name: DeserializeString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "name")), companyNo: DeserializeString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "companyNo")), addressLine1: DeserializeString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "addressLine1")), postCode: DeserializeString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "postCode")), postalArea: DeserializeString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "postalArea")), country: DeserializeIGetCustomers_UseCompany_Associate_Items_Country(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "country")));
             }
 
             throw new global::System.NotSupportedException();
@@ -1619,7 +1619,7 @@ namespace VBNxt.Client.State
             return _stringParser.Parse(obj.Value.GetString()!);
         }
 
-        private global::VBNxt.Client.State.CountryData? DeserializeIGetCustomers_UseCompany_Associate_Items_Country(global::System.Text.Json.JsonElement? obj)
+        private global::VBNXT.Client.State.CountryData? DeserializeIGetCustomers_UseCompany_Associate_Items_Country(global::System.Text.Json.JsonElement? obj)
         {
             if (!obj.HasValue)
             {
@@ -1629,7 +1629,7 @@ namespace VBNxt.Client.State
             var typename = obj.Value.GetProperty("__typename").GetString();
             if (typename?.Equals("Country", global::System.StringComparison.Ordinal) ?? false)
             {
-                return new global::VBNxt.Client.State.CountryData(typename, name: DeserializeString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "name")));
+                return new global::VBNXT.Client.State.CountryData(typename, name: DeserializeString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "name")));
             }
 
             throw new global::System.NotSupportedException();
@@ -1637,13 +1637,13 @@ namespace VBNxt.Client.State
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
-    public partial class GetAvailableCompaniesBuilder : global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::VBNxt.Client.IGetAvailableCompaniesResult>
+    public partial class GetAvailableCompaniesBuilder : global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::VBNXT.Client.IGetAvailableCompaniesResult>
     {
-        private readonly global::StrawberryShake.IOperationResultDataFactory<global::VBNxt.Client.IGetAvailableCompaniesResult> _resultDataFactory;
+        private readonly global::StrawberryShake.IOperationResultDataFactory<global::VBNXT.Client.IGetAvailableCompaniesResult> _resultDataFactory;
         private readonly global::StrawberryShake.Serialization.ILeafValueParser<global::System.Int32, global::System.Int32> _intParser;
         private readonly global::StrawberryShake.Serialization.ILeafValueParser<global::System.String, global::System.String> _stringParser;
         private readonly global::StrawberryShake.Serialization.ILeafValueParser<global::System.Int64, global::System.Int64> _longParser;
-        public GetAvailableCompaniesBuilder(global::StrawberryShake.IOperationResultDataFactory<global::VBNxt.Client.IGetAvailableCompaniesResult> resultDataFactory, global::StrawberryShake.Serialization.ISerializerResolver serializerResolver)
+        public GetAvailableCompaniesBuilder(global::StrawberryShake.IOperationResultDataFactory<global::VBNXT.Client.IGetAvailableCompaniesResult> resultDataFactory, global::StrawberryShake.Serialization.ISerializerResolver serializerResolver)
         {
             _resultDataFactory = resultDataFactory ?? throw new global::System.ArgumentNullException(nameof(resultDataFactory));
             _intParser = serializerResolver.GetLeafValueParser<global::System.Int32, global::System.Int32>("Int") ?? throw new global::System.ArgumentException("No serializer for type `Int` found.");
@@ -1698,7 +1698,7 @@ namespace VBNxt.Client.State
             return (_resultDataFactory.Create(resultInfo), resultInfo);
         }
 
-        private global::VBNxt.Client.State.Query_AvailableCompaniesData? DeserializeIGetAvailableCompanies_AvailableCompanies(global::System.Text.Json.JsonElement? obj)
+        private global::VBNXT.Client.State.Query_AvailableCompaniesData? DeserializeIGetAvailableCompanies_AvailableCompanies(global::System.Text.Json.JsonElement? obj)
         {
             if (!obj.HasValue)
             {
@@ -1708,7 +1708,7 @@ namespace VBNxt.Client.State
             var typename = obj.Value.GetProperty("__typename").GetString();
             if (typename?.Equals("Query_AvailableCompanies", global::System.StringComparison.Ordinal) ?? false)
             {
-                return new global::VBNxt.Client.State.Query_AvailableCompaniesData(typename, totalCount: DeserializeInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "totalCount")), items: DeserializeIGetAvailableCompanies_AvailableCompanies_ItemsNonNullableArray(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "items")));
+                return new global::VBNXT.Client.State.Query_AvailableCompaniesData(typename, totalCount: DeserializeInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "totalCount")), items: DeserializeIGetAvailableCompanies_AvailableCompanies_ItemsNonNullableArray(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "items")));
             }
 
             throw new global::System.NotSupportedException();
@@ -1724,14 +1724,14 @@ namespace VBNxt.Client.State
             return _intParser.Parse(obj.Value.GetInt32()!);
         }
 
-        private global::System.Collections.Generic.IReadOnlyList<global::VBNxt.Client.State.VbcCompanyData>? DeserializeIGetAvailableCompanies_AvailableCompanies_ItemsNonNullableArray(global::System.Text.Json.JsonElement? obj)
+        private global::System.Collections.Generic.IReadOnlyList<global::VBNXT.Client.State.VbcCompanyData>? DeserializeIGetAvailableCompanies_AvailableCompanies_ItemsNonNullableArray(global::System.Text.Json.JsonElement? obj)
         {
             if (!obj.HasValue)
             {
                 return null;
             }
 
-            var vbcCompanys = new global::System.Collections.Generic.List<global::VBNxt.Client.State.VbcCompanyData>();
+            var vbcCompanys = new global::System.Collections.Generic.List<global::VBNXT.Client.State.VbcCompanyData>();
             foreach (global::System.Text.Json.JsonElement child in obj.Value.EnumerateArray())
             {
                 vbcCompanys.Add(DeserializeNonNullableIGetAvailableCompanies_AvailableCompanies_Items(child));
@@ -1740,7 +1740,7 @@ namespace VBNxt.Client.State
             return vbcCompanys;
         }
 
-        private global::VBNxt.Client.State.VbcCompanyData DeserializeNonNullableIGetAvailableCompanies_AvailableCompanies_Items(global::System.Text.Json.JsonElement? obj)
+        private global::VBNXT.Client.State.VbcCompanyData DeserializeNonNullableIGetAvailableCompanies_AvailableCompanies_Items(global::System.Text.Json.JsonElement? obj)
         {
             if (!obj.HasValue)
             {
@@ -1750,7 +1750,7 @@ namespace VBNxt.Client.State
             var typename = obj.Value.GetProperty("__typename").GetString();
             if (typename?.Equals("VbcCompany", global::System.StringComparison.Ordinal) ?? false)
             {
-                return new global::VBNxt.Client.State.VbcCompanyData(typename, name: DeserializeString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "name")), vismaNetCompanyId: DeserializeInt64(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "vismaNetCompanyId")));
+                return new global::VBNXT.Client.State.VbcCompanyData(typename, name: DeserializeString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "name")), vismaNetCompanyId: DeserializeInt64(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "vismaNetCompanyId")));
             }
 
             throw new global::System.NotSupportedException();
@@ -1780,7 +1780,7 @@ namespace VBNxt.Client.State
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
     public partial class Query_UseCompanyData
     {
-        public Query_UseCompanyData(global::System.String __typename, global::VBNxt.Client.State.Query_UseCompany_Associate_ConnectionData? associate = default !)
+        public Query_UseCompanyData(global::System.String __typename, global::VBNXT.Client.State.Query_UseCompany_Associate_ConnectionData? associate = default !)
         {
             this.__typename = __typename ?? throw new global::System.ArgumentNullException(nameof(__typename));
             Associate = associate;
@@ -1789,14 +1789,14 @@ namespace VBNxt.Client.State
         public global::System.String __typename { get; }
 
         ///<summary>A field for accessing the data from the table `Associate`</summary>
-        public global::VBNxt.Client.State.Query_UseCompany_Associate_ConnectionData? Associate { get; }
+        public global::VBNXT.Client.State.Query_UseCompany_Associate_ConnectionData? Associate { get; }
     }
 
     ///<summary>A connection from an object to a list of objects of type `Associate`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
     public partial class Query_UseCompany_Associate_ConnectionData
     {
-        public Query_UseCompany_Associate_ConnectionData(global::System.String __typename, global::System.Collections.Generic.IReadOnlyList<global::VBNxt.Client.State.AssociateData?>? items = default !)
+        public Query_UseCompany_Associate_ConnectionData(global::System.String __typename, global::System.Collections.Generic.IReadOnlyList<global::VBNXT.Client.State.AssociateData?>? items = default !)
         {
             this.__typename = __typename ?? throw new global::System.ArgumentNullException(nameof(__typename));
             Items = items;
@@ -1805,14 +1805,14 @@ namespace VBNxt.Client.State
         public global::System.String __typename { get; }
 
         ///<summary>Array of rows returned by the query operation.</summary>
-        public global::System.Collections.Generic.IReadOnlyList<global::VBNxt.Client.State.AssociateData?>? Items { get; }
+        public global::System.Collections.Generic.IReadOnlyList<global::VBNXT.Client.State.AssociateData?>? Items { get; }
     }
 
     ///<summary>Table "Actor" (152).</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
     public partial class AssociateData
     {
-        public AssociateData(global::System.String __typename, global::System.Int32? associateNo = default !, global::System.Int32? customerNo = default !, global::System.String? name = default !, global::System.String? companyNo = default !, global::System.String? addressLine1 = default !, global::System.String? postCode = default !, global::System.String? postalArea = default !, global::VBNxt.Client.State.CountryData? country = default !)
+        public AssociateData(global::System.String __typename, global::System.Int32? associateNo = default !, global::System.Int32? customerNo = default !, global::System.String? name = default !, global::System.String? companyNo = default !, global::System.String? addressLine1 = default !, global::System.String? postCode = default !, global::System.String? postalArea = default !, global::VBNXT.Client.State.CountryData? country = default !)
         {
             this.__typename = __typename ?? throw new global::System.ArgumentNullException(nameof(__typename));
             AssociateNo = associateNo;
@@ -1849,7 +1849,7 @@ namespace VBNxt.Client.State
         public global::System.String? PostalArea { get; }
 
         ///<summary>A one-to-one relation, "Country" (678), from "Associate" (table "Actor" (152), columns {Ctry, 4036}) to "Country" (table "Ctry" (29), columns {CtryNo, 549}).</summary>
-        public global::VBNxt.Client.State.CountryData? Country { get; }
+        public global::VBNXT.Client.State.CountryData? Country { get; }
     }
 
     ///<summary>Table "Ctry" (29).</summary>
@@ -1872,7 +1872,7 @@ namespace VBNxt.Client.State
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "12.8.1.0")]
     public partial class Query_AvailableCompaniesData
     {
-        public Query_AvailableCompaniesData(global::System.String __typename, global::System.Int32? totalCount = default !, global::System.Collections.Generic.IReadOnlyList<global::VBNxt.Client.State.VbcCompanyData>? items = default !)
+        public Query_AvailableCompaniesData(global::System.String __typename, global::System.Int32? totalCount = default !, global::System.Collections.Generic.IReadOnlyList<global::VBNXT.Client.State.VbcCompanyData>? items = default !)
         {
             this.__typename = __typename ?? throw new global::System.ArgumentNullException(nameof(__typename));
             TotalCount = totalCount;
@@ -1885,7 +1885,7 @@ namespace VBNxt.Client.State
         public global::System.Int32? TotalCount { get; }
 
         ///<summary>An array of objects representing the available companies</summary>
-        public global::System.Collections.Generic.IReadOnlyList<global::VBNxt.Client.State.VbcCompanyData>? Items { get; }
+        public global::System.Collections.Generic.IReadOnlyList<global::VBNXT.Client.State.VbcCompanyData>? Items { get; }
     }
 
     ///<summary>An object that contains the VBC company info.</summary>

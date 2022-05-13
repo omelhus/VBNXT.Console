@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.IdentityModel.Tokens.Jwt;
 using System.Net.Http.Headers;
-using VBNxt.Client;
+using VBNXT.Client;
 
 // Read the configuration from user secrets
 /* Format:
